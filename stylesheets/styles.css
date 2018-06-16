@@ -1,0 +1,399 @@
+
+@import 'variables.css';
+@import 'base/index.css';
+@import 'layouts/index.css';
+@import 'elements/index.css';
+@import 'components/index.css';
+
+@import 'themes/theme.css';
+
+body {
+	font-size: 16px;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1em;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Header*/
+
+.container { 
+	max-width: 1000px;
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+}
+
+.layout-header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+}
+
+.mobile-menu {
+		display: none;
+	}
+
+.navbar-nav {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0;
+	margin-top: 1rem;
+}
+
+.navbar-nav li {
+	padding-bottom: .75rem;
+	margin-right: 2.19rem;
+	border-bottom: 3px solid #fff;
+}
+
+.navbar-nav li.active {
+	border-bottom: 3px solid var(--global-link-color);	
+}
+
+.navbar-nav li a {
+	color: var(--global-muted-color);
+	font-size: var(--base-h4-font-size);
+}
+
+
+.navbar-nav li a:hover {
+	color: var(--global-link-color);
+	text-decoration: none;
+}
+
+
+/*Slider*/
+
+.slider {
+  position: relative;
+}
+
+.slider-foreground {
+  position: relative;
+}
+
+.slider-overlay,
+.slider-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.slider-overlay {
+  background: url(../img/battlement.png) repeat-x;
+  top: 98.5%;
+}
+
+.layout-slider {
+	display: flex;
+	padding-top: 2.19rem;
+	justify-content: space-between;
+	color: #fff;
+}
+
+.slider-foreground {
+	position: relative;
+}
+
+.slider-control {
+    position: absolute;
+    width: 2.5rem;
+    height: 4rem;
+    top: 50%;
+    margin-top: -1rem;
+	margin-left: 7.2%;
+    background: url(../img/left.png) no-repeat;
+    cursor: pointer;
+}
+
+.slider-next {
+    right: 0;
+    transform: rotate(180deg);
+    margin-left: 0;
+    margin-right: 7.2%;
+}
+
+.slider-content {
+	margin-top: 20%;
+	margin-right: 5.3rem;
+}
+
+.slider-actions {
+	margin-left: 12px;
+	border-radius: 2px;
+}
+
+.icon-check {
+	margin-right: 8px;
+	background-image: url(../img/check.png)
+}
+/*Features*/
+
+.layout-features {
+	display: flex;
+/*	flex-wrap: wrap;*/
+	justify-content: space-between;
+	margin-top: 4.56rem;
+	margin-bottom: 5rem;
+}
+
+.card-feature {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.card-text {
+	text-align: center;
+}
+
+.card-title h4{
+	margin-bottom: 0;
+}
+
+.card-icon {
+	width: 11.6rem;
+	height: 11.6rem;
+	border-radius: 50%;
+	margin-bottom: 1.75rem;
+}
+
+
+.card-pencil {
+	background: var(--global-link-color) url(../img/pencil.png) no-repeat 50% 50%;
+}
+
+.card-tv {
+	background: var(--global-danger-background) url(../img/tv.png) no-repeat 50% 50%;
+}
+
+.card-bakery {
+	background: var(--global-warning-background) url(../img/bakery.png) no-repeat 50% 50%;
+}
+
+/*Shopping-cart*/
+
+.layout-shopping-cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 3rem;
+	color: #6f7173;
+}
+
+.layout-shopping-cart .layout-item:nth-child(2){
+	flex-basis: 53%;
+}
+
+.shopping-cart p {
+	line-height: 2;
+	color: #909090;
+}
+
+/*Footer*/
+
+.layout-footer {
+	display: flex;
+	justify-content: center;
+	padding-top: 1.9rem;
+	padding-bottom: 2.5rem;
+	border-top: var(--global-border-width) solid var(--global-border-color);
+}
+
+@media (max-width: 640px) {
+	body {
+		font-size: 18px;
+	}
+
+	.container {
+		max-width: 583px;
+	}
+
+	h2 {
+		font-size: 2.33rem;
+	}
+
+	h3, h4 {
+		font-size: 1.88rem;
+	}
+
+/*Header*/
+
+	.layout-header {
+		margin-top: 1.1rem;
+		margin-bottom: 0.83rem;
+	}
+
+	.navbar-nav {
+		display: none;
+		position: absolute;
+	    float: right;
+	    font-size: 0;
+	    letter-spacing: -.013rem;
+	    background-color: #fff;
+	    right: 1rem;
+	    top: 3rem;
+	    padding-left: 2rem;
+	    padding-right: .5rem;
+	    z-index: 2;
+	}
+	
+	.mobile-menu {
+		display: block;
+		width: 58px;
+		height: 44px;
+	}
+
+	.active.navbar-nav {
+		display: block;
+	}
+
+/*Slider*/
+	
+	.slider-overlay {
+ 		background: none;
+	}
+
+	.layout-slider {
+		justify-content: flex-start;
+	}
+
+	.layout-slider .layout-item:first-child {
+		max-width: 40%;
+	}
+
+	.slider-control {
+		display: none;
+	}
+	
+	.slider-content {
+		margin-top: 0;
+		margin-right: 0;
+		padding-left: 10px;
+	}
+   
+    .slider-title h2{
+	    font-size: 1.72rem;
+	}
+
+	.slider-description h3{
+		font-size: 1.26rem;
+	}
+
+	.slider-image {
+		padding-left: .5rem;
+	}
+
+	.slider-image img {
+		width: 80%;
+	}
+
+	.slider-actions {
+		margin-left: 0;
+		
+	}
+
+	.slider-actions .button {
+		font-size: 1.72rem;
+		padding: 6px 14px;
+	}
+/*Features*/
+
+
+
+	.features .container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.layout-features {
+		flex-direction: column;
+		margin-top: 0;
+    	margin-bottom: 2.2rem;
+		}
+
+	.layout-features .layout-item {
+ 		max-width: 100%;
+ 		border-bottom: var(--global-border-width) solid var(--global-border-color);
+ 		padding-left: 2.44rem;
+		padding-right: 4.33rem;
+	}
+
+	.card-icon {
+		max-width: 7.8rem;
+		height: 7.8rem;
+		background-image: none;
+		margin-top: 1.2rem;
+		margin-bottom: 1.2rem;
+		text-align: center;
+	}
+	
+	.icon-pencil {
+		background-image: url(../img/pencil.png);
+		margin-top: 1.55rem;
+		font-size: 4.44rem;
+	}
+
+
+	.icon-tv {
+		background-image: url(../img/tv.png);
+		margin-top: 1.55rem;
+		font-size: 4.44rem;
+	}
+
+	.icon-bakery {
+		background-image: url(../img/bakery.png);
+		margin-top: 1.55rem;
+		font-size: 4.44rem;
+	}
+	
+	
+	.card-feature {
+		flex-direction: row;
+	}
+
+	.card-text {
+		text-align: left;
+		padding-left: 1.2rem;
+	}
+
+	.card-description p{
+		font-size: 1.11rem;
+	}
+
+
+/*Shopping-cart*/
+		
+	.layout-shopping-cart {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.layout-shopping-cart img {
+		max-width: 215px;
+	}
+
+	.layout-shopping-cart .layout-item:first-child {
+		text-align: center;
+		margin-bottom: .7rem;
+	}
+
+/*Footer*/
+
+	.layout-footer {
+		padding-top: 1.5rem;
+		padding-bottom: 1rem;
+
+	}
+
+}
