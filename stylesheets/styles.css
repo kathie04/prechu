@@ -21,6 +21,12 @@ body {
   background-repeat: no-repeat;
 }
 
+.container { 
+	max-width: 1000px;
+	padding-left: 1.4rem;
+	padding-right: 1.4rem;
+}
+
 /* Header*/
 
 .container { 
@@ -33,6 +39,11 @@ body {
 	display: flex;
 	justify-content: space-between;
 	margin-top: 1.5rem;
+}
+
+.logo {
+	display: block;
+	min-height: 3rem;
 }
 
 .mobile-menu {
@@ -88,6 +99,10 @@ body {
   bottom: 0;
 }
 
+.slider-background {
+	background-size: cover;
+}
+
 .slider-overlay {
   background: url(../img/battlement.png) repeat-x;
   top: 98.5%;
@@ -98,6 +113,7 @@ body {
 	padding-top: 2.19rem;
 	justify-content: space-between;
 	color: #fff;
+	align-items: center;
 }
 
 .slider-foreground {
@@ -110,7 +126,7 @@ body {
     height: 4rem;
     top: 50%;
     margin-top: -1rem;
-	margin-left: 7.2%;
+	margin-left: 6.2%;
     background: url(../img/left.png) no-repeat;
     cursor: pointer;
 }
@@ -119,13 +135,16 @@ body {
     right: 0;
     transform: rotate(180deg);
     margin-left: 0;
-    margin-right: 7.2%;
+    margin-right: 6.2%;
 }
 
-.slider-content {
-	margin-top: 20%;
-	margin-right: 5.3rem;
+.slider-control:hover{
+	transform : scale(1.5, 1.5);	
 }
+
+.slider-next:hover{
+	transform: rotate(180deg) scale(1.5, 1.5);
+} 
 
 .slider-actions {
 	margin-left: 12px;
@@ -138,7 +157,7 @@ body {
 }
 /*Features*/
 
-.layout-features {
+.grid-features {
 	display: flex;
 /*	flex-wrap: wrap;*/
 	justify-content: space-between;
@@ -165,7 +184,11 @@ body {
 	border-radius: 50%;
 	margin-bottom: 1.75rem;
 }
-
+.card-icon-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 
 .card-pencil {
 	background: var(--global-link-color) url(../img/pencil.png) no-repeat 50% 50%;
@@ -264,6 +287,8 @@ body {
 
 	.layout-slider {
 		justify-content: flex-start;
+		padding-bottom: .5rem;
+		align-items: flex-start;
 	}
 
 	.layout-slider .layout-item:first-child {
@@ -275,8 +300,6 @@ body {
 	}
 	
 	.slider-content {
-		margin-top: 0;
-		margin-right: 0;
 		padding-left: 10px;
 	}
    
@@ -314,13 +337,13 @@ body {
 		padding-left: 0;
 	}
 
-	.layout-features {
+	.grid-features {
 		flex-direction: column;
 		margin-top: 0;
     	margin-bottom: 2.2rem;
 		}
 
-	.layout-features .layout-item {
+	.grid-features .grid-item {
  		max-width: 100%;
  		border-bottom: var(--global-border-width) solid var(--global-border-color);
  		padding-left: 2.44rem;
@@ -328,33 +351,18 @@ body {
 	}
 
 	.card-icon {
-		max-width: 7.8rem;
+		width: 7.8rem;
 		height: 7.8rem;
-		background-image: none;
+		background-size: 50%;
 		margin-top: 1.2rem;
 		margin-bottom: 1.2rem;
 		text-align: center;
+		flex-shrink: 0;
 	}
 	
-	.icon-pencil {
-		background-image: url(../img/pencil.png);
-		margin-top: 1.55rem;
-		font-size: 4.44rem;
+	.card-pencil {
+		background-size: 40%;
 	}
-
-
-	.icon-tv {
-		background-image: url(../img/tv.png);
-		margin-top: 1.55rem;
-		font-size: 4.44rem;
-	}
-
-	.icon-bakery {
-		background-image: url(../img/bakery.png);
-		margin-top: 1.55rem;
-		font-size: 4.44rem;
-	}
-	
 	
 	.card-feature {
 		flex-direction: row;
@@ -396,4 +404,14 @@ body {
 
 	}
 
+}
+
+@media (min-width: 2000px) {
+	.slider-control {
+	margin-left: 20%;
+}
+
+.slider-next {
+    margin-right: 20%;
+}
 }
